@@ -1,1 +1,1 @@
-worker: python ob_havo.py
+bot: python ob_havo.py
