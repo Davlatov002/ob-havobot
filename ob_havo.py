@@ -1,7 +1,6 @@
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 import requests
-import asyncio
 from bs4 import BeautifulSoup as BS
 
 t = requests.get('https://sinoptik.ua/погода-ташкент')
@@ -205,6 +204,7 @@ def start(update, context):
 def main():
     Token = "5749829049:AAF5Dp3z_-KTkuwUgG-KDRARE-09qpvqtx0"
     updater = Updater(Token)
+    print('salom')
     updater.dispatcher.add_handler(CommandHandler("start", start))
     updater.dispatcher.add_handler(CallbackQueryHandler(inline_handlerlar))
     updater.start_polling()
